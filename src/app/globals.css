@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta de colores - Mármol de Lujo */
+  --primary: #1C1C1E;      /* Negro Profundo - Base oscura del mármol */
+  --secondary: #F5E8D3;    /* Beige Claro - Toques suaves y texto */
+  --tertiary: #D4AF37;     /* Oro Metálico - Vetas doradas y highlights */
+
+  /* Variaciones del primario (marrón oscuro) */
+  --primary-light: #3D2B1F; /* Marrón Oscuro / Chocolate */
+  --primary-dark: #2F1E12;  /* Marrón más oscuro para sombras profundas */
+
+  /* Variaciones del terciario (tonos dorados) */
+  --tertiary-light: #C9A63A; /* Oro ligeramente más claro */
+  --tertiary-dark: #A67B5B;  /* Marrón Dorado - Transiciones */
+
+  --background: #1C1C1E;   /* Negro profundo como fondo base */
+  --foreground: #F5E8D3;   /* Beige claro para texto */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* Custom gradient backgrounds - Tema Mármol */
+.bg-hero-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 30%, var(--primary-dark) 70%, var(--tertiary-dark) 100%);
+}
+
+.bg-solution-gradient {
+  background: linear-gradient(135deg, var(--secondary) 0%, #E8DCC0 50%, var(--tertiary-dark) 100%);
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+}
+
+.bg-tertiary-gradient {
+  background: linear-gradient(135deg, var(--tertiary-dark) 0%, var(--tertiary) 50%, var(--tertiary-light) 100%);
+}
+
+/* Efectos de mármol */
+.marble-texture {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(166, 123, 91, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(61, 43, 31, 0.05) 0%, transparent 50%);
+}
+
+.marble-veins {
+  position: relative;
+}
+.marble-veins::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.3) 50%, transparent 70%);
+  pointer-events: none;
+  opacity: 0.1;
+}
