@@ -1,5 +1,10 @@
 {
   "name": "landing-page-metas",
-  "compatibility_date": "2025-12-26",
-  "pages_build_output_dir": "out"
+  "pages_build_output_dir": "out",
+  "pages_build_config": {
+    "build_command": "npm run build",
+    "destination_dir": "out",
+    "root_dir": "",
+    "build_caching": true
+  }
 }
