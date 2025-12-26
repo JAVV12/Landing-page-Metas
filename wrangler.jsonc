@@ -1,3 +1,4 @@
 {
-  "name": "landing-page-metas"
+  "name": "landing-page-metas",
+  "pages_build_output_dir": "out"
 }
