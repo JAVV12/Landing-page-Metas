@@ -31,12 +31,12 @@ export default function CountdownTimer() {
 
   return (
     <div className="text-white py-4 px-6 shadow-lg" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)' }}>
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
         {/* Lado izquierdo: Contador */}
         <div className="flex items-center gap-4">
           <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <polyline points="12,6 12,12 16,14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="12" r="10" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <polyline points="12,6 12,12 16,14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
 
           <div className="flex items-center gap-2">
@@ -58,29 +58,15 @@ export default function CountdownTimer() {
         {/* Lado derecho: Logo y texto */}
         <div className="flex items-center gap-4">
           <div className="text-right">
-            <h2 className="text-xl font-bold mb-1">Adquiere "Logra tus metas"</h2>
-            <p className="text-sm opacity-90">¡No pierdas esta oportunidad única!</p>
+            <h2 className="text font-bold mb-1">Adquiere "Logra tus metas"</h2>
+            <p className="text-sm opacity-90">¡No pierdas esta oportunidad!</p>
           </div>
 
           <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
             <img
-              src="https://drive.google.com/thumbnail?id=1RLNZ4O91bBtbIr2fAqBUjpt4eKpVgiqU&sz=s256"
+              src="/images/LOGO1.png"
               alt="Logo Autoliderazgo"
-              className="w-12 h-12 object-contain"
-              onError={(e) => {
-                // Intentar con otra URL de Google Drive
-                const img = e.currentTarget as HTMLImageElement;
-                if (img.src.includes('thumbnail')) {
-                  img.src = "https://drive.google.com/uc?export=view&id=1RLNZ4O91bBtbIr2fAqBUjpt4eKpVgiqU";
-                } else {
-                  // Si tampoco funciona, mostrar placeholder
-                  img.style.display = 'none';
-                  const parent = img.parentElement;
-                  if (parent) {
-                    parent.innerHTML = '<div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">AL</div>';
-                  }
-                }
-              }}
+              className="w-full h-full object-contain"
             />
           </div>
         </div>

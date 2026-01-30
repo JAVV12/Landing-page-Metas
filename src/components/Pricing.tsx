@@ -4,13 +4,13 @@ export default function Pricing() {
   const plan = inputs.plans[0]; // Solo hay un plan según planCount: 1
 
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: 'var(--secondary)' }}>
+    <section className="py-12 md:py-20 px-4" style={{ backgroundColor: 'var(--secondary)' }}>
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--primary)' }}>
-            Una Inversión en tu Futuro Líder
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4" style={{ color: 'var(--primary)' }}>
+            Una inversión para tu vida
           </h2>
-          <p className="text-xl leading-relaxed" style={{ color: 'var(--primary)', opacity: 0.8 }}>
+          <p className="text-lg md:text-xl leading-relaxed" style={{ color: 'var(--primary)', opacity: 0.8 }}>
             El precio de no cambiar es mucho más alto que el costo de este programa.
             Esta es tu oportunidad de romper el ciclo.
           </p>
@@ -19,14 +19,14 @@ export default function Pricing() {
         {/* Single Column Pricing */}
         <div className="rounded-2xl shadow-2xl overflow-hidden border-2" style={{ backgroundColor: 'var(--secondary)', borderColor: 'var(--tertiary)' }}>
           {/* Header */}
-          <div className="bg-tertiary-gradient text-white p-8 text-center">
-            <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
-            <div className="text-4xl font-bold mb-2">{plan.price}</div>
+          <div className="bg-tertiary-gradient text-white p-6 md:p-8 text-center">
+            <h3 className="text-xl md:text-2xl font-bold mb-2">{plan.title}</h3>
+            <div className="text-3xl md:text-4xl font-bold mb-2">{plan.price}</div>
             <p className="text-sm" style={{ color: 'var(--secondary)', opacity: 0.9 }}>{plan.note}</p>
           </div>
 
           {/* Benefits */}
-          <div className="p-8">
+          <div className="p-6 md:p-8">
             <ul className="space-y-4 mb-8">
               {plan.bullets.map((bullet, index) => (
                 <li key={index} className="flex items-start">
@@ -52,14 +52,6 @@ export default function Pricing() {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Additional Info */}
-        <div className="text-center mt-8">
-          <p className="text-sm" style={{ color: 'var(--primary)', opacity: 0.7 }}>
-            *La Sesión de Claridad Gratuita es obligatoria antes de comenzar.
-            Sin compromiso, solo para validar que somos la opción correcta para ti.
-          </p>
         </div>
       </div>
     </section>

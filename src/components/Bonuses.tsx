@@ -4,21 +4,21 @@ export default function Bonuses() {
   if (!inputs.hasBonuses) return null;
 
   return (
-    <section className="py-20 px-4 text-white" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)' }}>
+    <section className="py-12 md:py-20 px-4 text-white" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)' }}>
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--secondary)' }}>
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4" style={{ color: 'var(--secondary)' }}>
             Bonos Exclusivos por Tiempo Limitado
           </h2>
-          <p className="text-xl leading-relaxed" style={{ color: 'var(--secondary)', opacity: 0.9 }}>
+          <p className="text-lg md:text-xl leading-relaxed" style={{ color: 'var(--secondary)', opacity: 0.9 }}>
             Para acelerar tu transformación y maximizar los resultados del programa,
             incluye estos recursos adicionales de alto valor.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {inputs.bonuses.map((bonus, index) => (
-            <div key={index} className="p-8 rounded-lg shadow-lg border-2" style={{ backgroundColor: 'var(--secondary)', borderColor: 'var(--tertiary)', opacity: 0.95 }}>
+            <div key={index} className="p-6 md:p-8 rounded-lg shadow-lg border-2" style={{ backgroundColor: 'var(--secondary)', borderColor: 'var(--tertiary)', opacity: 0.95 }}>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--primary)' }}>{bonus.title}</h3>
                 <div className="text-2xl font-bold" style={{ color: 'var(--primary)' }}>{bonus.value}</div>
