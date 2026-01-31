@@ -2,6 +2,8 @@ export const inputs = {
   // A) Tipo de landing
   preset: "serviceLaunch",
   copyMode: "emocional",
+  brandName: "Alejandro Valencia",
+  tagline: "Mentor de Autoliderazgo",
 
   // C) Oferta
   offerName: "Cómo lograr tus metas en 2026 sin sentir miedo a fracasar",
