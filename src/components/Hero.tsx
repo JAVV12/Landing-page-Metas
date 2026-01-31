@@ -55,10 +55,12 @@ export default function Hero() {
 
       <div className="relative max-w-4xl mx-auto text-center">
         {/* Brand */}
+        {/* Brand - Hidden by request
         <div className="mb-6">
           <h2 className="text-base md:text-lg font-semibold mb-2" style={{ color: 'var(--tertiary)' }}>{inputs.brandName}</h2>
           <p className="text-lg md:text-xl font-medium" style={{ color: 'var(--secondary)' }}>{inputs.tagline}</p>
         </div>
+        */}
 
         {/* Main Headline */}
         <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
